@@ -1,9 +1,9 @@
 let randomNumberArray = [];
-let checkNumbers;
+let checkNumber;
 let validNumbersArray = [];
 
 
-multipleNumers ();
+multipleNumbers();
 
 
 console.log("questp è quello che contine l'array" + randomNumberArray);
@@ -12,7 +12,7 @@ document.getElementById("showing_numbers").innerHTML = randomNumberArray;
 
 
 
-function multipleNumers (){
+function multipleNumbers(){
     for(let i = 0 ; i < 5; i++){
         let randomNumber = generatingRanbdomnumbers (1, 100);
         
@@ -27,7 +27,7 @@ function eraseContent(){
     askNumbers();
     checkValidNumbers();
 
-    alert("Hai indovinato" + validNumbersArray.length);
+    alert("Hai indovinato" + validNumbersArray.length + " e i numeri sono" + validNumbersArray);
     
 }
 
@@ -40,27 +40,15 @@ function generatingRanbdomnumbers (min, max){
 
 function askNumbers(){
     for(let i = 0 ; i < 5; i++){
-         checkNumbers = prompt("inserisci i numeri visualizzati prima");
-         console.log("questi sono i numeri di checknumbers" + checkNumbers);
-                 
+         let checkNumber = prompt("inserisci i numeri visualizzati prima");
+         checkValidNumbers(checkNumber);
     }
 }
 
-function checkValidNumbers(){
-
-    // individuare se i numeri sono corretti
-    // quanti e quali sono
-    // let validNumberCheck = false
-
- 
-
-    for (let i = 0; i < randomNumberArray.length; i++) {
-        if (randomNumberArray.includes(checkNumbers) ){
-            console.log(checkNumbers);
-            console.log(validNumbersArray);
-            validNumbersArray.push(checkNumbers);
-        }
-
+function checkValidNumbers(number){
+    if (randomNumberArray.includes(parseInt(number)) ){
+        console.log('number prompt ', number);
+        validNumbersArray.push(number);
+        console.log('arrayvalidNumber ',validNumbersArray);
     }
-    
 }
