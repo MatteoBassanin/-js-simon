@@ -7,11 +7,14 @@ function multipleNumers (){
     for(let i = 0 ; i < 5; i++){
         let randomNumber = generatingRanbdomnumbers (1, 100);
         
-        randomNumberArray.push(randomNumber);
-        
-    
+        randomNumberArray.push(randomNumber);         
     }
+}
 
+setTimeout(eraseContent,30000);
+
+function eraseContent(){
+    document.getElementById("showing_numbers").innerHTML = "";
 }
 
 
