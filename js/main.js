@@ -11,10 +11,11 @@ function multipleNumers (){
     }
 }
 
-setTimeout(eraseContent,30000);
+setTimeout(eraseContent,3000);
 
 function eraseContent(){
     document.getElementById("showing_numbers").innerHTML = "";
+    askNumbers()
 }
 
 
@@ -22,4 +23,10 @@ function generatingRanbdomnumbers (min, max){
     const randomNumber = Math.floor(Math.random()*(max - min) + 1)+ min;
     console.log(randomNumber);
     return randomNumber;
+}
+
+function askNumbers(){
+    for(let i = 0 ; i < 5; i++){
+        prompt("inserisci i numeri visualizzati prima");         
+    }
 }
