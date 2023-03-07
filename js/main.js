@@ -52,16 +52,7 @@ function checkValidNumbers(){
     // quanti e quali sono
     // let validNumberCheck = false
 
-    // while (!validNumberCheck){
-        
-    //     if (!randomNumberArray.includes(checkNumbers) ){
-    //                 console.log(checkNumbers);
-    //                 console.log(validNumbersArray);
-    //                 validNumbersArray.push(checkNumbers);
-    //                 validNumberCheck = true;
-    //             }
-    //     validNumberCheck ++;
-    // }
+ 
 
     for (let i = 0; i < randomNumberArray.length; i++) {
         if (randomNumberArray.includes(checkNumbers) ){
